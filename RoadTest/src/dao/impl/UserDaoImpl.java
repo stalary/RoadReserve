@@ -10,8 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Stalary on 17/5/11.
- */
+* @Author:Stalary
+* @package:dao.impl
+* @Description:用户Dao
+* @Date: 17/5/18 下午12:49
+* @Version:v1.0.0
+*/
 public class UserDaoImpl implements UserDao{
     private PreparedStatement pstmt = null;
     private Connection conn = null;
@@ -19,7 +23,13 @@ public class UserDaoImpl implements UserDao{
     private String sql = null;
     private Statement stmt = null;
     private String queryPassword = null;
-
+    /**
+    * @Description:预约
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:53
+    * @Params:
+    * @Return:List
+    */
     @Override
     public List reserve() {
         List<Road> listRoad = new ArrayList<>();
@@ -40,7 +50,13 @@ public class UserDaoImpl implements UserDao{
         }
         return listRoad;
     }
-
+    /**
+    * @Description:取消预约
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:53
+    * @Params:
+    * @Return:List
+    */
     @Override
     public List cancelReserve() {
         List<Road> listRoad = new ArrayList<>();
@@ -61,7 +77,13 @@ public class UserDaoImpl implements UserDao{
         }
         return listRoad;
     }
-
+    /**
+    * @Description:查询道路
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:53
+    * @Params:
+    * @Return:List
+    */
     @Override
     public List queryRoad() {
         List<Road> listRoad = new ArrayList<>();
@@ -83,7 +105,13 @@ public class UserDaoImpl implements UserDao{
         }
         return listRoad;
     }
-
+    /**
+    * @Description:查询预约
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:53
+    * @Params:
+    * @Return:List
+    */
     @Override
     public List queryReserve() {
         List<Reserve> listReserve = new ArrayList<>();

@@ -4,8 +4,12 @@ import dao.impl.ManagerDaoImpl;
 import service.ManagerService;
 
 /**
- * Created by Stalary on 17/5/15.
- */
+* @Author:Stalary
+* @package:service.impl
+* @Description:管理逻辑层
+* @Date: 17/5/18 下午12:58
+* @Version:v1.0.0
+*/
 public class ManagerServiceImpl implements ManagerService{
     private String id;
     private String name;
@@ -18,7 +22,13 @@ public class ManagerServiceImpl implements ManagerService{
         this.type = type;
     }
 
-
+    /**
+    * @Description:逻辑判断
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:59
+    * @Params:
+    * @Return:int
+    */
     @Override
     public int judge() {
         ManagerDaoImpl manager = new ManagerDaoImpl(this.id,this.name);

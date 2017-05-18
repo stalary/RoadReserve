@@ -1,15 +1,18 @@
 package dao.impl;
 import dao.LoginDao;
-import dao.RegisterDao;
 import dbconnect.GetConnect;
+import entity.User;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
-import entity.User;
 /**
- * Created by Stalary on 17/5/11.
- */
+* @Author:Stalary
+* @package:登录Dao
+* @Description:dao.impl
+* @Date: 17/5/18 下午12:48
+* @Version:v1.0.0
+*/
 public class LoginDaoImpl implements LoginDao{
     private PreparedStatement pstmt = null;
     private Connection conn = null;
@@ -24,7 +27,13 @@ public class LoginDaoImpl implements LoginDao{
     public LoginDaoImpl(String account) {
         user.setAccount(account);
     }
-
+    /**
+    * @Description:查询用户密码
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:45
+    * @Params:
+    * @Return:String
+    */
     @Override
     public String queryUser() {
         try {
@@ -42,7 +51,13 @@ public class LoginDaoImpl implements LoginDao{
         }
         return queryPassword;
     }
-
+    /**
+    * @Description:查询管理员
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:49
+    * @Params:
+    * @Return:Sting
+    */
     @Override
     public String queryManager() {
         try {
@@ -60,13 +75,25 @@ public class LoginDaoImpl implements LoginDao{
         }
         return queryPassword;
     }
-
+    /**
+    * @Description:是否存在该用户
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:50
+    * @Params:
+    * @Return:List
+    */
     @Override
     public List existUser() {
         RegisterDaoImpl re = new RegisterDaoImpl();
         return re.queryUser();
     }
-
+    /**
+    * @Description:是否存在该管理员
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:50
+    * @Params:
+    * @Return:List
+    */
     @Override
     public List existManager() {
         try {

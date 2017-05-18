@@ -28,9 +28,9 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect(request.getContextPath() + "/index.jsp");
         } else if(tempReturn == 2) {
             UserServiceImpl roadUser = new UserServiceImpl("查询道路");
-            List listRoad = roadUser.queryJudge();
+            List listRoad = roadUser.Judge();
             UserServiceImpl reserveUser = new UserServiceImpl("查询预约情况");
-            List listReserve = reserveUser.queryJudge();
+            List listReserve = reserveUser.Judge();
             request.getSession().setAttribute("listRoad",listRoad);
             request.getSession().setAttribute("listReserve",listReserve);
             response.sendRedirect(request.getContextPath() + "/manager.jsp");

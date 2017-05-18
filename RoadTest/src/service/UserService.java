@@ -6,5 +6,5 @@ import java.util.List;
  * Created by Stalary on 17/5/11.
  */
 public interface UserService {
-    List queryJudge();
+    List Judge();
 }

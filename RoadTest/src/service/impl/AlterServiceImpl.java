@@ -6,8 +6,12 @@ import service.AlterService;
 import java.util.List;
 
 /**
- * Created by Stalary on 17/5/11.
- */
+* @Author:Stalary
+* @package:service.impl
+* @Description:修改逻辑层
+* @Date: 17/5/18 下午12:57
+* @Version:v1.0.0
+*/
 public class AlterServiceImpl implements AlterService{
     private String account;
     private String password;
@@ -22,7 +26,13 @@ public class AlterServiceImpl implements AlterService{
         this.name = name;
         this.phone = phone;
     }
-
+    /**
+    * @Description:逻辑判断
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:58
+    * @Params:
+    * @Return:int
+    */
     public int judge() {
         AlterDaoImpl alter = new AlterDaoImpl(this.account, this.password, this.name, this.phone);
         List list = alter.queryUser();

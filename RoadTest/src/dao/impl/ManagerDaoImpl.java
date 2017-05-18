@@ -8,8 +8,12 @@ import entity.Road;
 import java.sql.*;
 
 /**
- * Created by Stalary on 17/5/15.
- */
+* @Author:Stalary
+* @package:dao.impl
+* @Description:管理Dao
+* @Date: 17/5/18 下午12:48
+* @Version:v1.0.0
+*/
 public class ManagerDaoImpl implements ManagerDao{
     private PreparedStatement pstmt = null;
     private Connection conn = null;
@@ -28,7 +32,13 @@ public class ManagerDaoImpl implements ManagerDao{
         reserve.setName(name);
     }
 
-
+    /**
+    * @Description:预约
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:51
+    * @Params:
+    * @Return:int
+    */
     @Override
     public int reserveRoad() {
         try {
@@ -45,7 +55,13 @@ public class ManagerDaoImpl implements ManagerDao{
         }
         return -1;
     }
-
+    /**
+    * @Description:取消预约
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:51
+    * @Params:
+    * @Return:int
+    */
     @Override
     public int cancelReserveRoad() {
         try {
@@ -62,7 +78,13 @@ public class ManagerDaoImpl implements ManagerDao{
         }
         return -1;
     }
-
+    /**
+    * @Description:增加预约记录
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:51
+    * @Params:
+    * @Return:int
+    */
     @Override
     public int insertReserve() {
         try {
@@ -80,7 +102,13 @@ public class ManagerDaoImpl implements ManagerDao{
         }
         return -1;
     }
-
+    /**
+    * @Description:删除预约记录
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:52
+    * @Params:
+    * @Return:int
+    */
     @Override
     public int cancelInsertReserve() {
         try {

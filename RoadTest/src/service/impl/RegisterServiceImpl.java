@@ -6,8 +6,12 @@ import service.RegisterService;
 import java.util.List;
 
 /**
- * Created by Stalary on 17/5/11.
- */
+* @Author:Stalary
+* @package:service.impl
+* @Description:注册逻辑层
+* @Date: 17/5/18 下午12:59
+* @Version:v1.0.0
+*/
 public class RegisterServiceImpl implements RegisterService {
     private String account;
     private String password;
@@ -22,6 +26,13 @@ public class RegisterServiceImpl implements RegisterService {
         this.name = name;
         this.phone = phone;
     }
+    /**
+    * @Description:逻辑判断
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:59
+    * @Params:
+    * @Return:int
+    */
     @Override
     public int judge() {
         RegisterDaoImpl re = new RegisterDaoImpl(this.account, this.password, this.name, this.phone);

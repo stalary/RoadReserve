@@ -1,8 +1,12 @@
 package dbconnect;
 import java.sql.*;
 /**
- * Created by Stalary on 17/5/11.
- */
+* @Author:Stalary
+* @package:dbconnect
+* @Description:JDBC
+* @Date: 17/5/18 下午12:44
+* @Version:v1.0.0
+*/
 public class GetConnect {
     private static PreparedStatement pstmt=null;
     private static Connection conn=null;
@@ -14,6 +18,13 @@ public class GetConnect {
     private static String password="li197910";
     public GetConnect(){
     }
+    /**
+    * @Description:连接数据库
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:56
+    * @Params:
+    * @Return:Connection
+    */
     public static Connection connect() {
 
         try {
@@ -26,6 +37,13 @@ public class GetConnect {
         }
         return conn;
     }
+    /**
+    * @Description:断开与数据库连接
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:56
+    * @Params:
+    * @Return:
+    */
     public static void close() {
         try {
             if (rs != null){

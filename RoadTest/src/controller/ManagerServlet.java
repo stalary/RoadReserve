@@ -26,7 +26,7 @@ public class ManagerServlet extends HttpServlet {
         int tempReturn = manager.judge();
         if(tempReturn == 1) {
             UserServiceImpl user = new UserServiceImpl("查询道路");
-            List list = user.queryJudge();
+            List list = user.Judge();
             request.getSession().setAttribute("list",list);
             response.sendRedirect(request.getContextPath() + "/roadRecord.jsp");
         }

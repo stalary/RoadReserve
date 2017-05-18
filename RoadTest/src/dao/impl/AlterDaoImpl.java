@@ -9,8 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Stalary on 17/5/11.
- */
+* @Author:Stalary
+* @package:dao.impl
+* @Description:修改Dao
+* @Date: 17/5/18 下午12:46
+* @Version:v1.0.0
+*/
 public class AlterDaoImpl implements AlterDao{
     private PreparedStatement pstmt = null;
     private Connection conn = null;
@@ -28,9 +32,15 @@ public class AlterDaoImpl implements AlterDao{
         user.setName(name);
         user.setPhone(phone);
     }
-
+    /**
+    * @Description:修改用户信息
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:45
+    * @Params:
+    * @Return:int
+    */
     @Override
-    public int alterUser() {//修改用户信息
+    public int alterUser() {
         try {
             conn = GetConnect.connect();
             sql = "update users set password=? where account=?";
@@ -46,7 +56,13 @@ public class AlterDaoImpl implements AlterDao{
         }
         return -1;
     }
-
+    /**
+    * @Description:查询用户信息
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:45
+    * @Params:
+    * @Return:List
+    */
     public List queryUser() {
         RegisterDaoImpl register = new RegisterDaoImpl();
         list = register.queryUser();

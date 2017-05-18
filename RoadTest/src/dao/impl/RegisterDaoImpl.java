@@ -8,8 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Stalary on 17/5/11.
- */
+* @Author:Stalary
+* @package:dao.impl
+* @Description:注册Dao
+* @Date: 17/5/18 下午12:49
+* @Version:v1.0.0
+*/
 public class RegisterDaoImpl implements RegisterDao{
     private PreparedStatement pstmt = null;
     private Connection conn = null;
@@ -27,9 +31,15 @@ public class RegisterDaoImpl implements RegisterDao{
         user.setName(name);
         user.setPhone(phone);
     }
-
+    /**
+    * @Description:增加用户
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:52
+    * @Params:
+    * @Return:int
+    */
     @Override
-    public int insertUser() {//注册用户信息
+    public int insertUser() {
         try {
             conn = GetConnect.connect();
             sql = "insert into users (account,password,name,phone) values(?,?,?,?)";
@@ -47,7 +57,13 @@ public class RegisterDaoImpl implements RegisterDao{
         }
         return -1;
     }
-
+    /**
+    * @Description:查询用户
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:52
+    * @Params:
+    * @Return:List
+    */
     @Override
     public List queryUser() {
         try {

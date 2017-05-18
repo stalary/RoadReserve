@@ -26,12 +26,12 @@ public class AdminServlet extends HttpServlet {
         if(tempReturn == 1) {
             if (type.equals("管理预约")) {
                 UserServiceImpl user = new UserServiceImpl("查询预约情况");
-                List list = user.queryJudge();
+                List list = user.Judge();
                 request.getSession().setAttribute("listReserve", list);
                 response.sendRedirect(request.getContextPath() + "/managerReserve.jsp");
             } else {
                 UserServiceImpl user = new UserServiceImpl("查询道路");
-                List list = user.queryJudge();
+                List list = user.Judge();
                 request.getSession().setAttribute("listRoad", list);
                 response.sendRedirect(request.getContextPath() + "/managerRoad.jsp");
             }

@@ -6,8 +6,12 @@ import service.LoginService;
 import java.util.List;
 
 /**
- * Created by Stalary on 17/5/11.
- */
+* @Author:Stalary
+* @package:service.impl
+* @Description:登录逻辑层
+* @Date: 17/5/18 下午12:58
+* @Version:v1.0.0
+*/
 public class LoginServiceImpl implements LoginService{
     private String account;
     private String password;
@@ -20,7 +24,13 @@ public class LoginServiceImpl implements LoginService{
         this.password = password;
         this.type = type;
     }
-
+    /**
+    * @Description:逻辑判断
+    * @Author:Stalary
+    * @Date 17/5/18 下午12:58
+    * @Params:
+    * @Return:int
+    */
     @Override
     public int judge() {
         LoginDaoImpl login = new LoginDaoImpl(this.account);

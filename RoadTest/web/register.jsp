@@ -19,12 +19,6 @@ To change this template use File | Settings | File Templates.
     <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
 </head>
 <body>
-<%--<script>--%>
-    <%--var aa = '<%=username%>';--%>
-    <%--$(function () {--%>
-        <%--alert(aa);--%>
-    <%--})--%>
-<%--</script>--%>
 <div class="main_body">
 <div class="rg_top">
     <div class="rg_title">

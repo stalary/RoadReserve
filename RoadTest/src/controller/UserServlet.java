@@ -23,29 +23,29 @@ public class UserServlet extends HttpServlet {
         UserServiceImpl user = new UserServiceImpl(type);
         if(accountType.equals("user")) {
             if (type.equals("预约")) {
-                List list = user.queryJudge();
+                List list = user.Judge();
                 request.getSession().setAttribute("list", list);
                 response.sendRedirect(request.getContextPath() + "/road.jsp");
             } else if (type.equals("取消预约")) {
-                List list = user.queryJudge();
+                List list = user.Judge();
                 request.getSession().setAttribute("list", list);
                 response.sendRedirect(request.getContextPath() + "/cancelReserve.jsp");
             } else if (type.equals("查询道路")) {
-                List list = user.queryJudge();
+                List list = user.Judge();
                 request.getSession().setAttribute("list", list);
                 response.sendRedirect(request.getContextPath() + "/roadRecord.jsp");
             } else if (type.equals("查询预约情况")) {
-                List list = user.queryJudge();
+                List list = user.Judge();
                 request.getSession().setAttribute("list", list);
                 response.sendRedirect(request.getContextPath() + "/reserveRecord.jsp");
             }
         } else {
             if(type.equals("管理预约")) {
-                List list = user.queryJudge();
+                List list = user.Judge();
                 request.getSession().setAttribute("list", list);
                 response.sendRedirect(request.getContextPath() + "/managerReserve.jsp");
             } else if(type.equals("管理道路")) {
-                List list = user.queryJudge();
+                List list = user.Judge();
                 request.getSession().setAttribute("list", list);
                 response.sendRedirect(request.getContextPath() + "/managerRoad.jsp");
             }

@@ -36,6 +36,13 @@ To change this template use File | Settings | File Templates.
             <td><b>编号</b></td>
             <td><b>状态</b></td>
         </tr>
+        /**
+        * @Description:从数据库中获取道路记录
+        * @Author:Stalary
+        * @Date 17/5/18 下午1:06
+        * @Params:
+        * @Return:
+        */
         <%
             List<Road> listRoad = (List<Road>)session.getAttribute("list");
             for(Road road : listRoad) {

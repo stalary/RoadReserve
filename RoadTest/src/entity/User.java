@@ -1,8 +1,12 @@
 package entity;
 
 /**
- * Created by Stalary on 17/5/10.
- */
+* @Author:Stalary
+* @package:entity
+* @Description:用户实体
+* @Date: 17/5/18 下午12:54
+* @Version:v1.0.0
+*/
 public class User {
     private String account;
     private String password;
