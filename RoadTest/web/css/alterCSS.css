@@ -1,0 +1,57 @@
+
+
+.al_title {
+    padding-top: 50px;
+    padding-left: 400px;
+    font: 17px bold oblique;
+}
+
+.al_top {
+    width: 1019px;
+}
+
+.al_content {
+    padding-left: 350px;
+}
+
+.al_content input {
+    background-color: transparent;
+    margin-right: 10px;
+}
+
+.al_content p {
+    padding: 40px 10px 0px 10px;
+}
+
+.al_button {
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+}
+
+.al_account {
+    margin-left: 35px;
+}
+
+.al_alter_password {
+    margin-left: 6px;
+}
+
+.al_phone {
+    margin-left: 20px;
+}
+
+.al_name {
+    margin-left: 35px;
+}
+
+
+.al_confirm_password {
+    margin-left: 6px;
+}
+
+.al_exit {
+    margin: -410px 0px 400px 800px;
+}

@@ -1,0 +1,19 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background: url('../images/bg.jpg') no-repeat;
+    background-size: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #17639d;
+}
+
+.main_body {
+    width:1000px;
+    margin: 0px auto;
+}
