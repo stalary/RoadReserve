@@ -1,0 +1,38 @@
+
+.mg_re_top {
+    width: 1019px;
+}
+
+.mg_re_title {
+    padding-top: 150px;
+    padding-left: 340px;
+    font: 17px bold itali;
+}
+
+.mg_re_table {
+    margin: 100px 0px 0px 330px;
+    font-size: 30px;
+}
+
+.mg_re_table td {
+    width: 100px;
+}
+
+.mg_re_table input {
+    background-color: transparent;
+    width: 50px;
+    height: 20px;
+}
+
+.mg_re_return {
+    margin: 200px 0px -200px 720px;
+}
+
+.mg_re_button {
+    background-color: transparent;
+    margin-top: 130px;
+    margin-left: -330px;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+}
