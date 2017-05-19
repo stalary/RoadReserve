@@ -4,7 +4,6 @@ import service.impl.AdminServiceImpl;
 import service.impl.UserServiceImpl;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,7 +13,6 @@ import java.util.List;
 /**
  * Created by Stalary on 17/5/17.
  */
-@WebServlet(name = "AdminServlet")
 public class AdminServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");//解决传入的值中文乱码问题

@@ -12,15 +12,20 @@ To change this template use File | Settings | File Templates.
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<html>
+<html lang="zh-CN">
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <title>道路</title>
     <link rel="stylesheet" href="css/roadCSS.css" type="text/css"/>
     <link rel="stylesheet" href="css/mainCSS.css" type="text/css"/>
-    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
 </head>
 <body>
-<div class="main_body">
+<div class="container">
     <div class="ro_top">
         <div class="ro_title">
             <h1>预约记录</h1>
@@ -37,13 +42,6 @@ To change this template use File | Settings | File Templates.
                 <td><b>用户名</b></td>
                 <td><b>道路编号</b></td>
             </tr>
-            /**
-            * @Description:从数据库中获取预约记录
-            * @Author:Stalary
-            * @Date 17/5/18 下午1:06
-            * @Params:
-            * @Return:
-            */
             <%
                 List<Reserve> listReserve = (List<Reserve>)session.getAttribute("list");
                 for(Reserve reserve : listReserve) {
@@ -61,5 +59,7 @@ To change this template use File | Settings | File Templates.
         <input type="button" value="返回首页" class="ro_button" onclick=window.location.href="index.jsp"; />
     </div>
 </div>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jQuery-3.2.1.min.js"></script>
 </body>
 </html>

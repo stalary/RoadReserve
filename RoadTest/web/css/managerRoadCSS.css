@@ -7,7 +7,7 @@
 
 .mg_ro_title {
     padding-top: 150px;
-    padding-left: 400px;
+    padding-left: 530px;
     font: 17px bold itali;
 }
 
@@ -18,8 +18,8 @@
 
 .mg_ro_table input {
     background-color: transparent;
-    width: 50px;
-    height: 20px;
+    width: 70px;
+    height: 25px;
 }
 
 .mg_ro_table td {
@@ -33,7 +33,7 @@
 .mg_ro_button {
     background-color: transparent;
     margin-top: 130px;
-    margin-left: -330px;
+    margin-left: -200px;
     width: 200px;
     height: 50px;
     font-size: 20px;

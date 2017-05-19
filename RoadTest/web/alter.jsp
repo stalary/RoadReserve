@@ -10,15 +10,20 @@ To change this template use File | Settings | File Templates.
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<html>
+<html lang="zh-CN">
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <title>修改密码</title>
     <link rel="stylesheet" href="css/alterCSS.css" type="text/css"/>
     <link rel="stylesheet" href="css/mainCSS.css" type="text/css"/>
-    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
 </head>
 <body>
-<div class="main_body">
+<div class="container">
     <div class="al_top">
         <div class="al_title">
             <h1>修改密码</h1>
@@ -38,6 +43,8 @@ To change this template use File | Settings | File Templates.
         <a href="login.jsp">返回首页</a>
     </div>
 </div>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jQuery-3.2.1.min.js"></script>
 </body>
 </html>
 
